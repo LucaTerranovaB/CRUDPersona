@@ -8,7 +8,7 @@ class TestPersonaService(unittest.TestCase):
    
     def testPerson(self):
         person = Person(39952739, 'Luca', 'Terranova', 'l.terranova')
-        self.assertEqual(person.dni, 39952739)
+        self.assertEqual(person.idd, 39952739)
 
   
     def testRepositorio(self):
@@ -25,10 +25,10 @@ class TestPersonaService(unittest.TestCase):
     #Añadir mas de un valor al repositorio
     def testService2Añadir(self):
         service = Service()
-        persona1 = Person(39952739, 'Rodrigo', 'Matamala', 'rodrigoM@gmail.com')
+        persona1 = Person(777, 'Rodrigo', 'Matamala', 'rodrigoM@gmail.com')
         service.agregar(persona1)
 
-        persona2 = Person(39952740, 'Silvestre', 'Peña', 'silverpyl@gmail.com')
+        persona2 = Person(666, 'Silvestre', 'Peña', 'silverpyl@gmail.com')
         service.agregar(persona2)
         
 
@@ -37,27 +37,27 @@ class TestPersonaService(unittest.TestCase):
      #Actualizar un valor
     def testServiceActualizar(self):
         service = Service()
-        persona1 = Person(39952739, 'Luca', 'Terranova', 'l.terranova@alumno.um.edu.ar')
-        service.actualizar(persona1, 39952739)
+        persona1 = Person(999, 'Luca', 'Terranova', 'l.terranova@alumno.um.edu.ar')
+        service.actualizar(persona1, 999)
 
-        persona2 = Person(39952739, 'Juan', 'Gomez', 'jgomez@email.com')
-        service.actualizar(persona2, 39952739)
+        persona2 = Person(888, 'Juan', 'Gomez', 'jgomez@email.com')
+        service.actualizar(persona2, 888)
 
         self.assertNotEqual(service.repository.human, persona2, 2)
 
     
     def testService(self):
         service = Service()
-        person1 = Person(39952739, 'Luca', 'Terranova', 'l.terranova@alumno.um.edu.ar')
+        person1 = Person(999, 'Luca', 'Terranova', 'l.terranova@alumno.um.edu.ar')
         service.agregar(person1)
 
-        service.borrar(39952739)
+        service.borrar(999)
         self.assertEqual(len(service.repository.human), 0)
 
    
     def testServicebuscarYVer(self):
         service = Service()
-        persona1 = Person(39952739, 'Luca', 'Terranova', 'l.terranova@alumno.um.edu.ar')
+        persona1 = Person(999, 'Luca', 'Terranova', 'l.terranova@alumno.um.edu.ar')
         service.agregar(persona1)
         
         self.assertEqual(len(service.buscarAll()), 1)

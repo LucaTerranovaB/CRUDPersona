@@ -1,14 +1,14 @@
 
 class Person():
 
-    def __init__(self, dni=None, nombre='', apellido='', mail=''):
-        self.dni = dni
+    def __init__(self, idd=None, nombre='', apellido='', mail=''):
+        self.idd = idd
         self.apellido = apellido
         self.nombre = nombre
         self.mail = mail
 
     def __repr__(self):
-        return f'{self.dni}, {self.nombre}, {self.apellido}, {self.mail}'
+        return f'{self.idd}, {self.nombre}, {self.apellido}, {self.mail}'
 
     @property
     def mail(self):
@@ -19,11 +19,11 @@ class Person():
         self._mail = Valor
 
     @property
-    def dni(self):
-        return self._dni
+    def idd(self):
+        return self._idd
 
-    @dni.setter
-    def dni(self, Valor):
+    @idd.setter
+    def idd(self, Valor):
         self._dni = Valor
 
     @property
@@ -35,12 +35,12 @@ class Person():
         self._apellido = Valor
 
     @property
-    def dni(self):
-        return self._dni
+    def idd(self):
+        return self._idd
 
-    @dni.setter
+    @idd.setter
     def dni(self, Valor):
-        self._dni = Valor
+        self._idd = Valor
 
     @property
     def name(self):
@@ -53,5 +53,5 @@ class Person():
 
         
 if __name__ == '__main__':
-    persona = Person(123, 'Luca', 'Terranova', 'l.terranova@alumno.um.edu.ar')
+    persona = Person(999 , 'Luca', 'Terranova', 'l.terranova@alumno.um.edu.ar')
  

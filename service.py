@@ -12,17 +12,17 @@ class Service:
         except Exception as e:
             print(e)
 
-    def borrar(self, dni: int):
+    def borrar(self, idd: int):
         try:
-            person = self.repository.buscarDni(dni)
-            self.repository.borrar(person.dni)
+            person = self.repository.buscarDni(idd)
+            self.repository.borrar(person.idd)
             return person
         except Exception as e:
             print(e)
 
-    def actualizar(self, nuevaPersona: Person, dni):
+    def actualizar(self, nuevaPersona: Person, idd):
         try:
-            return self.repository.actualizar(nuevaPersona, dni)
+            return self.repository.actualizar(nuevaPersona, idd)
         except Exception as e:
             print(e)
 

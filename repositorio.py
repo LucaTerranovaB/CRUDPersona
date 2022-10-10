@@ -5,32 +5,32 @@ class Repositorio:
         self.human = dict()
 
     def agregar(self, person: Person()):
-        if person.dni in self.human:
+        if person.idd in self.human:
             raise Exception("Inexistente")
         else:    
-            self.human[person.dni] = person
+            self.human[person.idd] = person
 
-    def borrar(self, dni: int):
-        if dni not in self.human:
+    def borrar(self, idd: int):
+        if idd not in self.human:
             raise Exception("Inexistente")
         else:
-            del self.human[dni]
+            del self.human[idd]
 
 
-    def actualizar(self,dni: int, nuevaPersona: Person, ):
-        if dni not in self.human:
+    def actualizar(self,idd: int, nuevaPersona: Person, ):
+        if idd not in self.human:
             raise Exception("Inexistente")
-        self.human[dni] = nuevaPersona
-        return self.human[dni]
+        self.human[idd] = nuevaPersona
+        return self.human[idd]
 
     
     def buscarLast(self):
         list(self.human.values())[-1]
 
-    def buscarDni(self, dni: int):
-        if dni not in self.human:
+    def buscarDni(self, idd: int):
+        if idd not in self.human:
             raise Exception("Inexistente")
-        return self.human[dni]
+        return self.human[idd]
 
 
     def buscarAll(self):
@@ -41,7 +41,7 @@ class Repositorio:
     def escribirArchivo(self):
         with open ('persona.txt', 'w') as file:
             for person in self.human.values():
-                file.write(f'{person.dni}, {person.nombre}, {person.apellido}, {person.mail};\n')
+                file.write(f'{person.idd}, {person.nombre}, {person.apellido}, {person.mail};\n')
 
     def leerrchivo(self):
         with open('persona.txt', 'r') as file:
