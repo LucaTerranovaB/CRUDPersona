@@ -22,7 +22,7 @@ class TestPersonaService(unittest.TestCase):
         service.agregar(persona)
         self.assertEqual(len(service.repository.human), 1)
 
-    #Añadir mas de un valor al repositorio
+   
     def testService2Añadir(self):
         service = Service()
         persona1 = Person(777, 'Rodrigo', 'Matamala', 'rodrigoM@gmail.com')

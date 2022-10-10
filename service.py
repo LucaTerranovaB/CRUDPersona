@@ -29,7 +29,7 @@ class Service:
     def buscarDni(self):
         try:
             return self.repository.buscarDni()
-        except KeyError as e:
+        except Exception as e:
             print(e)
 
     

@@ -6,20 +6,20 @@ class Repositorio:
 
     def agregar(self, person: Person()):
         if person.idd in self.human:
-            raise Exception("Inexistente")
+            pass
         else:    
             self.human[person.idd] = person
 
     def borrar(self, idd: int):
         if idd not in self.human:
-            raise Exception("Inexistente")
+            pass
         else:
             del self.human[idd]
 
 
     def actualizar(self,idd: int, nuevaPersona: Person, ):
         if idd not in self.human:
-            raise Exception("Inexistente")
+            pass
         self.human[idd] = nuevaPersona
         return self.human[idd]
 
@@ -29,7 +29,7 @@ class Repositorio:
 
     def buscarDni(self, idd: int):
         if idd not in self.human:
-            raise Exception("Inexistente")
+            pass
         return self.human[idd]
 
 
