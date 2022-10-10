@@ -35,14 +35,6 @@ class Person():
         self._apellido = Valor
 
     @property
-    def idd(self):
-        return self._idd
-
-    @idd.setter
-    def idd(self, Valor):
-        self._idd = Valor
-
-    @property
     def nombre(self):
         return self._nombre
 
