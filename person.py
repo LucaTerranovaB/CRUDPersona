@@ -54,5 +54,4 @@ class Person():
         
 if __name__ == '__main__':
     persona = Person(123, 'Luca', 'Terranova', 'l.terranova@alumno.um.edu.ar')
-    persona2 = Person(366952,'Silvestre','Peña', 'silverpyl@gmail.com' )
-    print(persona,persona2)
+ 

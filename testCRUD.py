@@ -42,7 +42,7 @@ class TestPersonaService(unittest.TestCase):
         service.agregar(persona1)
 
         persona2 = Person(123, 'Juan', 'Gomez', 'jgomez@email.com')
-        service.update(persona2, 123)
+        service.actualizar(persona2, 123)
 
         self.assertNotEqual(service.repository.human, persona2)
 
@@ -53,7 +53,7 @@ class TestPersonaService(unittest.TestCase):
         service.agregar(person1)
 
         service.borrar(123)
-        self.assertEqual(len(service.repository.people), 0)
+        self.assertEqual(len(service.repository.human), 0)
 
     #Ver todo
     def testServicebuscarYVer(self):
