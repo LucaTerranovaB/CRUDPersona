@@ -24,7 +24,7 @@ class Person():
 
     @idd.setter
     def idd(self, Valor):
-        self._dni = Valor
+        self._idd = Valor
 
     @property
     def apellido(self):
@@ -39,15 +39,15 @@ class Person():
         return self._idd
 
     @idd.setter
-    def dni(self, Valor):
+    def idd(self, Valor):
         self._idd = Valor
 
     @property
-    def name(self):
+    def nombre(self):
         return self._nombre
 
-    @name.setter
-    def name(self, Valor):
+    @nombre.setter
+    def nombre(self, Valor):
         self._nombre = Valor
 
 

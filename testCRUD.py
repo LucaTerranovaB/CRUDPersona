@@ -7,8 +7,8 @@ from service import Service
 class TestPersonaService(unittest.TestCase):
    
     def testPerson(self):
-        person = Person(39952739, 'Luca', 'Terranova', 'l.terranova')
-        self.assertEqual(person.idd, 39952739)
+        person = Person(999, 'Luca', 'Terranova', 'l.terranova@alumno.um.edu.ar')
+        self.assertEqual(person.idd, 999)
 
   
     def testRepositorio(self):
@@ -18,7 +18,7 @@ class TestPersonaService(unittest.TestCase):
     
     def testService(self):
         service = Service()
-        persona = Person(39952739, 'Luca', 'Terranova', 'l.terranova@alumno.um.edu.ar')
+        persona = Person(999, 'Luca', 'Terranova', 'l.terranova@alumno.um.edu.ar')
         service.agregar(persona)
         self.assertEqual(len(service.repository.human), 1)
 
