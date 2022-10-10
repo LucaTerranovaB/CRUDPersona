@@ -6,18 +6,20 @@ class Repositorio:
 
     def agregar(self, person: Person()):
         if person.dni in self.human:
-            raise KeyError('Clave Existente')
-        self.human[person.dni] = person
+            raise Exception("Inexistente")
+        else:    
+            self.human[person.dni] = person
 
     def borrar(self, dni: int):
         if dni not in self.human:
-            raise KeyError('Inexistente')
-        del self.human[dni]
+            raise Exception("Inexistente")
+        else:
+            del self.human[dni]
 
 
     def actualizar(self,dni: int, nuevaPersona: Person, ):
         if dni not in self.human:
-            raise KeyError('Inexistente')
+            raise Exception("Inexistente")
         self.human[dni] = nuevaPersona
         return self.human[dni]
 
@@ -27,7 +29,7 @@ class Repositorio:
 
     def buscarDni(self, dni: int):
         if dni not in self.human:
-            raise KeyError('Clave Inexistente')
+            raise Exception("Inexistente")
         return self.human[dni]
 
 

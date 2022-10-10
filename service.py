@@ -15,7 +15,7 @@ class Service:
     def borrar(self, dni: int):
         try:
             person = self.repository.buscarDni(dni)
-            self.repository.delete(person.dni)
+            self.repository.borrar(person.dni)
             return person
         except Exception as e:
             print(e)
