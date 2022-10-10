@@ -1,4 +1,7 @@
 # TP CRUD Personas
+# Luca Terranova
+
+# Repo Personal: https://github.com/LucaTerranovaB/CRUDPersona.git
 
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/LucaTerranovaB/CRUDPersona/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/LucaTerranovaB/CRUDPersona/tree/main)
 
